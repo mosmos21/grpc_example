@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package todo;
+
+import "google/protobuf/empty.proto";
+import "google/protobuf/timestamp.proto";
+
+service AuthService {
+  rpc Register(Account) returns (google.protobuf.Empty);
+  rpc Login(Account) returns (google.protobuf.Empty);
+}
+
+message Account {
+  string name = 1;
+  string password = 2;
+}
