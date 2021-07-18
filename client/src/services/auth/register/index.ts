@@ -1,7 +1,7 @@
 import { AuthClient } from "@todo-app/proto/gen/client/AuthServiceClientPb";
 import { Account } from "@todo-app/proto/gen/client/auth_pb";
 
-const serverURL = "localhost:8081";
+const serverURL = "http://localhost:8080";
 
 type Props = {
   userId: string,

@@ -5,6 +5,6 @@ import { register } from "@/handler/auth/register";
 const server = new Server();
 server.addService(AuthService, { register });
 
-server.bindAsync("0.0.0.0:8081",  ServerCredentials.createInsecure(), () => {
+server.bindAsync("http://0.0.0.0:8081",  ServerCredentials.createInsecure(), () => {
   server.start()
 })
